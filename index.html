@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olpay - Coming Soon</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="main container">
+      <div class="navbar">
+        <img class="logo" src="./assets/logo_soon.png" />
+      </div>
+      <div class="body">
+        <div class="content">
+          <h1 class="heading">It's time for biometric payments!</h1>
+          <p class="subheading">
+            With Olpay, which uses advanced facial recognition technology, your
+            payments will be faster and more convenient than ever.
+          </p>
+        </div>
+        <div class="image">
+          <img src="./assets/main.png" />
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="container form-container">
+        <h2 class="join">Join waitlist to access Olpay</h2>
+        <div class="input-wrapper">
+          <input
+            type="email"
+            id="input"
+            placeholder="Enter your email"
+            class="input"
+          />
+          <button id="submit" class="join-button">Join the waitlist</button>
+        </div>
+      </div>
+    </div>
+    <div class="faq">
+      <div class="container faq-container">
+        <h2 class="faq-header">Frequently asked questions</h2>
+        <div class="questions">
+          <div id="q1" class="question">
+            <div class="question-header">
+              <h3 class="question-title">What is Olpay?</h3>
+              <button id="q1t" class="toggler">
+                <img id="q1ti" src="assets/plus.png" />
+              </button>
+            </div>
+            <p id="q1a" class="answer hidden">
+              Olpay is an end-to-end payment solution for small and medium
+              businesses enabling them to accept Apple Pay, Google Pay, QR, card
+              and biometric payments using the facial recognition. .
+            </p>
+          </div>
+
+          <div id="q2" class="question">
+            <div class="question-header">
+              <h3 class="question-title">How does it work</h3>
+              <button id="q2t" class="toggler">
+                <img id="q2ti" src="assets/plus.png" />
+              </button>
+            </div>
+            <p id="q2a" class="answer hidden">
+              Olpay offers an Android and iOS app for merchants that converts
+              regular mobile device into a soft POS and allows merchants to
+              process payments.
+            </p>
+          </div>
+
+          <div id="q3" class="question">
+            <div class="question-header">
+              <h3 class="question-title">Where is Olpay located?</h3>
+              <button id="q3t" class="toggler">
+                <img id="q3ti" src="assets/plus.png" />
+              </button>
+            </div>
+            <p id="q3a" class="answer hidden">
+              Olpay is based out of New York, United States with an official
+              incorporation in the State of Delaware with management and
+              operations offices in the United States and Europe.
+            </p>
+          </div>
+
+          <div id="q4" class="question">
+            <div class="question-header">
+              <h3 class="question-title">How does Olpay process payments?</h3>
+              <button id="q4t" class="toggler">
+                <img id="q4ti" src="assets/plus.png" />
+              </button>
+            </div>
+            <p id="q4a" class="answer hidden">
+              Olpay uses Tap-on-Phone technology powered by Mastercard and local
+              payment solution providers to make sure merchants can process
+              payments seamlessly. This also includes and is not limited to
+              using digital wallets, account to account payments as well as
+              crypto currency (coming soon).
+            </p>
+          </div>
+
+          <div id="q5" class="question">
+            <div class="question-header">
+              <h3 class="question-title">Why Olpay?</h3>
+              <button id="q5t" class="toggler">
+                <img id="q5ti" src="assets/plus.png" />
+              </button>
+            </div>
+            <p id="q5a" class="answer hidden">
+              Olpay saves merchants tons of time and providesLegacy POS
+              terminals are single-functional on top of being bulky, not
+              merchant-friendly and outdated. Maintaining a hardware terminal
+              and this old device, getting support from the local provider bank
+              and constantly feeding in printing paper is exhausting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const re =
+        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      const buttonEl = document.getElementById("submit");
+      buttonEl.addEventListener("click", () => {
+        const input = document.getElementById("input");
+        if (re.test(input.value)) {
+          input.value = "";
+          buttonEl.innerText = "Submitted!";
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        } else {
+          alert("Enter a valid email");
+        }
+      });
+
+      const fadeIn = [{ opacity: 0 }, { opacity: 1 }];
+
+      const timing = {
+        duration: 200,
+        iterations: 1,
+      };
+
+      const plus = "assets/plus.png";
+      const minus = "assets/minus.png";
+
+      const addAnimation = () => {
+        for (let i = 1; i <= 5; i++) {
+          const qt = document.getElementById(`q${i}`);
+          const qa = document.getElementById(`q${i}a`);
+          const qti = document.getElementById(`q${i}ti`);
+          qt.addEventListener("click", () => {
+            const classList = Array.from(qa.classList);
+            if (classList.includes("hidden")) {
+              qa.classList.remove("hidden");
+              qti.setAttribute("src", minus);
+              qa.animate(fadeIn, timing);
+            } else {
+              qa.classList.add("hidden");
+              qti.setAttribute("src", plus);
+            }
+          });
+        }
+      };
+      addAnimation();
+    </script>
+  </body>
+</html>
