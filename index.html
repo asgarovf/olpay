@@ -130,6 +130,9 @@
           fetch("https://olpay.co/api/subscribe", {
             method: "post",
             body: JSON.stringify({ email: input.value }),
+            headers: {
+              "Content-Type": "application/json",
+            },
           }).then(() => {
             setTimeout(() => {
               buttonEl.classList.remove("disabled");
