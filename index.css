@@ -216,6 +216,10 @@ body {
     pointer-events: none;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 .toggler img{
   width: 100%;
 }

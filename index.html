@@ -127,11 +127,18 @@
       buttonEl.addEventListener("click", () => {
         const input = document.getElementById("input");
         if (re.test(input.value)) {
-          input.value = "";
+          fetch("https://olpay.co/api/subscribe", {
+            method: "post",
+            body: JSON.stringify({ email: input.value }),
+          }).then(() => {
+            setTimeout(() => {
+              buttonEl.classList.remove("disabled");
+              buttonEl.innerText = "Join the waitlist";
+            }, 4000);
+          });
+          buttonEl.classList.add("disabled");
           buttonEl.innerText = "Submitted!";
-          setTimeout(() => {
-            window.location.reload();
-          }, 1000);
+          input.value = "";
         } else {
           alert("Enter a valid email");
         }

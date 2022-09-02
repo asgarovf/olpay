@@ -19,6 +19,7 @@ app.use(
 );
 app.use(express.json());
 app.use(limiter);
+app.route("/api");
 
 app.post("/subscribe", (req, res) => {
   const { email } = req.body;
