@@ -213,6 +213,7 @@ body {
     opacity: 0;
     height: 0px;
     margin: 0px;
+    pointer-events: none;
 }
 
 .toggler img{
