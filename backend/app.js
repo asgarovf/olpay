@@ -19,10 +19,14 @@ app.use(
 );
 app.use(express.json());
 app.use(limiter);
-app.route("/api");
 
-app.post("/subscribe", (req, res) => {
+app.post("/api/subscribe", (req, res) => {
   const { email } = req.body;
+
+  if (!email) {
+    return res.status(401).json({ msg: "error", code: 401 });
+  }
+
   const text = `New entry: *${email}*`;
 
   try {
