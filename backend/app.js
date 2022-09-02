@@ -24,6 +24,7 @@ app.post("/api/subscribe", (req, res) => {
   const { email } = req.body;
 
   if (!email) {
+    console.log(email);
     return res.status(401).json({ msg: "error", code: 401 });
   }
 
