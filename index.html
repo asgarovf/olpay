@@ -17,38 +17,199 @@
   <body>
     <div class="main container">
       <div class="navbar">
-        <img class="logo" src="./assets/logo_soon.png" />
+        <img class="logo" src="./assets/logo.svg" />
+        <div class="navbar-links">
+          <a onclick="focusAbout()">About</a>
+          <a onclick="focusWhyOlpay()">Why Olpay?</a>
+          <a onclick="focusFaq()">FAQ</a>
+          <a onclick="focusContact()">Contact</a>
+        </div>
+        <div class="navbar-join-button">
+          <a href="#" class="primary-button" onclick="focusInput()"
+            >Join waitlist</a
+          >
+        </div>
       </div>
+
       <div class="body">
         <div class="content">
-          <h1 class="heading">It's time for biometric payments!</h1>
-          <p class="subheading">
-            With Olpay, which uses advanced facial recognition technology, your
-            payments will be faster and more convenient than ever.
+          <h1 class="heading">
+            Mobile app that converts your device into a POS
+          </h1>
+          <p class="subheading" style="margin-bottom: 12px; display: block">
+            <!-- With Olpay, which uses advanced facial recognition technology, your
+            payments will be faster and more convenient than ever. -->
+            Introducing Hassle-Free Way of Accepting Payments for Small and
+            Medium Businesses.
           </p>
+          <div class="form">
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="input"
+                placeholder="Enter your email"
+                class="input"
+              />
+              <button id="submit" class="input-join-button primary-button">
+                Join waitlist
+              </button>
+            </div>
+          </div>
         </div>
         <div class="image">
           <img src="./assets/main.png" />
         </div>
       </div>
-    </div>
-    <div class="form">
-      <div class="container form-container">
-        <h2 class="join">Join waitlist to access Olpay</h2>
-        <div class="input-wrapper">
-          <input
-            type="email"
-            id="input"
-            placeholder="Enter your email"
-            class="input"
-          />
-          <button id="submit" class="join-button">Join the waitlist</button>
+
+      <div id="about" class="body-accept">
+        <div class="image order-2">
+          <img src="./assets/accept.png" />
+        </div>
+        <div class="accept order-1">
+          <h1 class="heading-2">Accept payments with your own device</h1>
+          <p class="subheading">
+            Olpay converts your device into a digital POS machine, which is
+            usable in daily life.
+          </p>
+        </div>
+      </div>
+
+      <div class="transition container">
+        <div class="box">
+          <img src="./assets/tap-to-pay.svg" />
+          <h2>Tap to pay</h2>
+          <span
+            >Quick payments by just tapping your device using the NFC
+            reader</span
+          >
+        </div>
+        <div class="box">
+          <img src="./assets/qr-pay.svg" />
+          <h2>QR Pay</h2>
+          <span
+            >One of the most common payment methods of new generation is
+            supported!</span
+          >
+        </div>
+        <div class="box">
+          <img src="./assets/security.svg" />
+          <h2>100% Secure</h2>
+          <span
+            >Your funds and payments are under control of secure
+            technology</span
+          >
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="content">
+          <h1 class="heading-2">
+            Mobile app that converts your device into a POS
+          </h1>
+          <p class="subheading">
+            Introducing Hassle-Free Way of Accepting Payments for Small and
+            Medium Businesses.
+          </p>
+        </div>
+        <div class="image">
+          <img src="./assets/right-2.png" />
+        </div>
+      </div>
+
+      <div class="body-accept">
+        <div class="image order-2">
+          <img src="./assets/left-2.png" />
+        </div>
+        <div class="accept order-1">
+          <h1 class="heading-2">Accept payments with your own device</h1>
+          <p class="subheading">
+            Olpay converts your device into a digital POS machine, which is
+            usable in daily life.
+          </p>
+        </div>
+      </div>
+
+      <h2 class="transition-header" id="why-olpay">Why Olpay?</h2>
+      <div class="transition container">
+        <div class="box box-2">
+          <img src="./assets/cost.svg" />
+          <h2>Low-cost & Easy to scale</h2>
+          <span
+            >With Olpay, a simple Android device become more than just a phone,
+            turning into a powerful and scalable sales machine.</span
+          >
+        </div>
+        <div class="box box-2">
+          <img src="./assets/rotate.svg" />
+          <h2>Hassle-free & Fully digital</h2>
+          <span
+            >With no integration required and a digital receipt experience,
+            Olpay brings an eco-friendly and hassle- free business launch.</span
+          >
+        </div>
+        <div class="box box-2">
+          <img src="./assets/business.svg" />
+          <h2>Freedom of doing business</h2>
+          <span
+            >With an all-in-one payment solution, reporting, and transaction
+            history, Olpay gives the power back to the merchants.</span
+          >
+        </div>
+      </div>
+
+      <div class="analytics container">
+        <div class="analytics-box">
+          <div class="analytics-header">
+            <img src="./assets/analytics-1.png" />
+          </div>
+          <div class="analytics-bottom">
+            <h2>Hassle-free & Fully digital</h2>
+            <span
+              >With no integration required and a digital receipt experience,
+              Olpay brings an eco-friendly and hassle- free business
+              launch.</span
+            >
+          </div>
+        </div>
+        <div class="analytics-box">
+          <div class="analytics-header">
+            <img src="./assets/analytics-2.png" />
+          </div>
+          <div class="analytics-bottom">
+            <h2>Freedom of doing business</h2>
+            <span
+              >With an all-in-one payment solution, reporting, and transaction
+              history, Olpay gives the power back to the merchants.</span
+            >
+          </div>
         </div>
       </div>
     </div>
-    <div class="faq">
+
+    <div class="sponsors">
+      <div class="sponsors-main container">
+        <div class="sponsors-box">
+          <img class="sponsors-image-1" src="./assets/mastercard.png" />
+          <h2>Backed by Mastercard</h2>
+          <span
+            >Part of Start Path and FINITIV Equity-free Programs by
+            Mastercard.</span
+          >
+        </div>
+        <div class="sponsors-box">
+          <img class="sponsors-image-2" src="./assets/techstars.png" />
+          <h2>Investment from Stockholm Program</h2>
+          <span
+            >Part of Start Path and FINITIV Equity-free Programs by
+            Mastercard.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="faq" id="faq">
       <div class="container faq-container">
-        <h2 class="faq-header">Frequently asked questions</h2>
+        <h2 class="transition-header">Frequently asked questions</h2>
         <div class="questions">
           <div id="q1" class="question">
             <div class="question-header">
@@ -57,7 +218,7 @@
                 <img id="q1ti" src="assets/plus.png" />
               </button>
             </div>
-            <p id="q1a" class="answer hidden">
+            <p id="q1a" class="answer">
               Olpay is an end-to-end payment solution for small and medium
               businesses enabling them to accept Apple Pay, Google Pay, QR, card
               and biometric payments using the facial recognition.
@@ -127,7 +288,72 @@
       </div>
     </div>
 
+    <div id="contact" class="contact container">
+      <div class="contact-inner">
+        <div class="box box-2">
+          <img src="./assets/mail.svg" />
+          <h2>Have a question?</h2>
+          <span
+            >To learn more information or business inquiries email us at
+            seymur@olpay.co.</span
+          >
+        </div>
+        <div class="box box-2">
+          <img src="./assets/location.svg" />
+          <h2>Where are we located?</h2>
+          <span
+            >We are incorporated in the US, with small offices in New York, US,
+            and Stockholm, Sweden.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-top container ml-auto mr-auto">
+        <img class="footer-logo" src="./assets/logo_soon.svg" />
+        <div class="sponsored-by">
+          <span>Sponsored by</span>
+          <img src="./assets/mastercard.png" class="footer-mastercard" />
+          <img src="./assets/techstars-black.png" class="footer-techstars" />
+        </div>
+      </div>
+
+      <div class="footer-top container ml-auto mr-auto mt">
+        <span> Copyright © 2022, Olpay, Inc. </span>
+        <div class="social">
+          <img src="./assets/instagram.svg" />
+          <img src="./assets/linkedin.svg" />
+        </div>
+      </div>
+    </div>
+
     <script>
+      const focusInput = () => {
+        const el = document.getElementById("input");
+        el.focus();
+      };
+
+      const focusWhyOlpay = () => {
+        const el = document.getElementById("why-olpay");
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+
+      const focusAbout = () => {
+        const el = document.getElementById("about");
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+
+      const focusFaq = () => {
+        const el = document.getElementById("faq");
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+
+      const focusContact = () => {
+        const el = document.getElementById("contact");
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+
       const re =
         /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
       const buttonEl = document.getElementById("submit");
@@ -162,7 +388,7 @@
       };
 
       const plus = "assets/plus.png";
-      const minus = "assets/minus.png";
+      const minus = "assets/plus.png";
 
       const addAnimation = () => {
         for (let i = 1; i <= 5; i++) {
